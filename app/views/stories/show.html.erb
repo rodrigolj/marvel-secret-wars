@@ -1,4 +1,17 @@
 <div>
-  <h1 class="font-bold text-4xl">Stories#show</h1>
-  <p>Find me in app/views/stories/show.html.erb</p>
+  <h1 class="font-bold text-4xl pb-4">Story: <%= title(@story) %></h1>
+  <p><b>Description</b>: <%= description(@story) %></p>
+
+
+  <h2 class="font-bold text-2xl py-4">Characters</h2>
+  <div class="flex flex-wrap flex-row justify-center w-max-[580px]">
+    <% if @characters != [] %>
+      <% @characters.each do |character| %>
+        <figure class="p-4">
+          <%= image_tag(character_thumbnail(character), class: "max-w-48 max-h-48 overflow-hidden", alt: character_name(character)) %>
+          <figcaption class="font-bold text-center max-w-48"><%= character_name(character) %></figcaption>
+        </figure>
+      <% end %>
+    <% end %>
+  </div>
 </div>
