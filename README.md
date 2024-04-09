@@ -18,14 +18,15 @@
 
 5. Once you have your Marvel API keys, you need to set them in the Rails configuration. Run `rails credentials:edit` in your terminal. This will open the credentials file in your default text editor. Add your Marvel API keys in the following format:
 
-    ```yaml
-    marvel:
-      public_key: <your_public_key>
-      private_key: <your_private_key>
-    ```
+   ```yaml
+   marvel:
+     public_key: <your_public_key>
+     private_key: <your_private_key>
+   ```
 
-    Replace `<your_public_key>` and `<your_private_key>` with your actual Marvel API keys. Save and close the file.
+   Replace `<your_public_key>` and `<your_private_key>` with your actual Marvel API keys. Save and close the file.
 
-6. Run `rails server` to start the Rails server.
+6. Run `bin/dev` at least once, as it will compile the TailwindCSS and watch for updates. You can run `rails server` to start the Rails server without watching for TailwindCSS updates.
 
 7. Open your browser and navigate to `http://localhost:3000`. You should see the Marvel Secret Wars homepage.
+
