@@ -53,10 +53,14 @@ group :development, :test do
   gem "foreman"
   gem "rubocop", require: false
   gem "rubocop-rails-omakase", require: false
+  gem "spoom", require: false
+  gem "tapioca", require: false
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem "sorbet"
+  gem "sorbet-runtime"
   gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
